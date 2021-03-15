@@ -5,14 +5,14 @@
 * New users have **NO permissions** when first created.
 * New users are assigned **Access Key ID** & **Secret Access Keys** when first created. These are not the same as a password.
 * You only get to view your **Access Key ID** & **Secret Access Keys** once.
-* Always setup **Multifactor Authentication** on your root account.
+* Always setup **Multi-factor Authentication** on your root account.
 * You can create and customise your own password rotation policies
 
 # S3
 * S3 is Object-based. i.e. allows you to upload files.
 * Files are be from 0 Bytes to 5 TB.
 * There is unlimited storage.
-* FIles are stored in Buckets.
+* Files are stored in Buckets.
 * S3 is a universal namespace. Names must be unique globally.
 * Not suitable to install an operating system on (Object based storage not block based).
 * Successful uploads will generate a HTTP 200 status code.
@@ -22,7 +22,7 @@
     - Value (The data and it is made up of a sequence of bytes)
     - Version ID (Important for versioning)
     - Metadata (Data about the data you are storing)
-    - Subresources 
+    - Sub-resources 
         - Access Control Lists (ACL. Permissions for the object) 
         - Torrent
 * Read after Write consistency for PUTS of new Objects.
