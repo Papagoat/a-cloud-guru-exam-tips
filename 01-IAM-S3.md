@@ -6,7 +6,7 @@
 * New users are assigned **Access Key ID** & **Secret Access Keys** when first created. These are not the same as a password.
 * You only get to view your **Access Key ID** & **Secret Access Keys** once.
 * Always setup **Multi-factor Authentication** on your root account.
-* You can create and customise your own password rotation policies
+* You can create and customize your own password rotation policies
 
 # S3
 * S3 is Object-based. i.e. allows you to upload files.
@@ -69,18 +69,18 @@
 | S3 Standard | 99.99% availability | 99.999999999% durability | Stored redundantly across multiple devices in multiple facilities and is designed to sustain the loss of 2 facilities concurrently | NA | milliseconds |
 | S3 - IA (Infrequently Accessed) | 99.99% availability | 99.999999999% durability | For data that is accessed less frequently but requires rapid access when needed. Lower fee than S3, but you are charged a retrieval fee | per GB retrieved | milliseconds |
 | S3 One Zone - IA | 99.5% availability | 99.999999999% durability | For where you want a lower-cost option for infrequently accessed data but do not require the multiple AZ data resilience | per GB retrieved | milliseconds |
-| S3 Intelligent Tiering | 99.99% availability | 99.999999999% durability | Designed to optimise costs by automatically moving data to the most cost-effective access tier, without performance impact or operational overhead | NA | milliseconds |
+| S3 Intelligent Tiering | 99.99% availability | 99.999999999% durability | Designed to optimize costs by automatically moving data to the most cost-effective access tier, without performance impact or operational overhead | NA | milliseconds |
 | S3 Glacier | 99.99% availability | 99.999999999% durability | A secure, durable and low-cost storage class for data archiving. Retrieval times configurable from minutes to hours | per GB retrieved | select minutes or hours |
 | S3 Glacier Deep Archive | 99.99% availability | 99.999999999% durability | Lowest-cost storage class where a retrieval time of 12 hours is acceptable | per GB retrieved | select hours |
 
-# AWS Organisations
+# AWS Organizations
 ## Best Practices
 * Always enable MFA on root account.
 * Always use a strong and complex password on root account.
 Paying account should be used for billing purposes only. Do not deploy resources into the paying account.
 * Enable/Disable AWS services using Service Control Policies (SCP) either on OU or on individual accounts.
 
-# Cloudfront
+# CloudFront
 * Edge Location - This is the location where content will be cached. This is separate to an AWS Region/AZ.
 * Origin - This is the origin of all the files that the CDN will distribute. This can be either an S3 Bucket, an EC2 Instance, an Elastic Load Balancer or Route 53.
 * Distribution - This is the name given by the CDN which consists of a collection of Edge Locations.
@@ -107,10 +107,10 @@ Paying account should be used for billing purposes only. Do not deploy resources
 * Athena is an interactive query service.
 * Allows you to query data located in S3 using standard SQL.
 * Serverless.
-* Commonly used to analyse log data stored in S3.
+* Commonly used to analyze log data stored in S3.
 
 # Macie
 * Macie uses AI to analyze data in S3 and helps to identify PII.
-* Can also be used to analyse Cloud Trail logs for suspicious API activity.
+* Can also be used to analyze Cloud Trail logs for suspicious API activity.
 * Includes Dashboards, Reports and Alerting.
 * Great for PCI-DSS compliance and preventing ID theft.
