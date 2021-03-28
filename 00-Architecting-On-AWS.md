@@ -84,7 +84,7 @@ https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/dedicated-hosts-overview.htm
 ## Elastic IP Address
 Static public IP Address but can move across regions
 
-## Ephermeral Ports
+## Ephemeral Ports
 https://docs.aws.amazon.com/vpc/latest/userguide/vpc-network-acls.html#nacl-ephemeral-ports
 
 ## Control Tower
