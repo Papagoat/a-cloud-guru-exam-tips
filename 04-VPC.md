@@ -60,7 +60,30 @@
 * You can create custom network ACLs. By default, each custom network ACL denies all inbound and outbound traffic until you add rules.
 * Each subnet in your VPC must be associated with a network ACL. If you don't explicitly associate a subnet with a network ACL, the subnet is automatically associated with the default network ACL.
 * Block IP Addresses using network ACLs not Security Groups.
-* You can associate a network ACL with multiple subnets; however, a subnet can be associated with only one network ACL at a time. WHen you associate a network ACL with a subnet, the previous association is removed.
+* You can associate a network ACL with multiple subnets; however, a subnet can be associated with only one network ACL at a time. When you associate a network ACL with a subnet, the previous association is removed.
 * Network ACLs contain a numbered list of rules that is evaluated in order, starting with the lowest numbered rule.
 * Network ACLs have separate inbound and outbound rules, and each rule can either allow or deny traffic.
 * Network ACLs are stateless; responses to allowed inbound traffic are subject to the rules for outbound traffic (and vice versa).
+
+# Bastion Host
+* A NET Gateway or NAT Instance is used to provide internet traffic to EC2 instances in a private subnet.
+* A Bastion is used to securely administer EC2 instances (Using SSH or RDP). Bastions are called Jump Boxes in various countries.
+* You cannot use a NAT Gateway as a Bastion host.
+
+# Direct Connect
+* Direct Connect directly connects your data center to AWS.
+* Useful for high throughput workloads (ie lots of network traffic).
+* Or if you need a stable and reliable secure connection.
+* Steps:
+    - Create a virtual interface in the Direct Connect console. This is a **PUBLIC Virtual Interface**.
+    - Go to the VPC console and then to VPN connections. Create a Customer Gateway.
+    - Create a Virtual Private Gateway.
+    - Attach the Virtual Private Gateway to the desired VPC.
+    - Select VPN Connections and create a new VPN Connection.
+    - Select the Virtual Private Gateway and the Customer Gateway.
+    - Once the VPN is available, set up the VPN on the customer gateway or firewall.
+
+# Global Accelerator
+* AWS Global Accelerator is a service in which you create accelerators to improve availability and performance of your applications for local and global users.
+* You are assigned two static IP addresses (or alternatively you can bring your own).
+* You can control traffic using traffic dials. This is done within the endpoint group.
